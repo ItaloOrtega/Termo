@@ -57,8 +57,9 @@ def sair(): #Função que salva a pontuação do usuário e sai da aplicação
   quit()
 
 def final(): #Função de quando o jogo é finalizado, para jogar novamente ou não
-  global jogar, a, b
-  pop_up = Tk()
+  global jogar, a, b, img
+  pop_up = Toplevel()
+  pop_up.iconphoto(False, img)
   pop_up.title("Jogar Novamente?")
   pop_up.geometry('%dx%d+%d+%d' % (310, 175, a+70, b+100)) #Aloca a nova tela, para que mostre o resultado do usuario
   pop_up.geometry("310x175") #Coloca o tamanho da tela como 310x175 pixels
@@ -83,8 +84,10 @@ def final(): #Função de quando o jogo é finalizado, para jogar novamente ou n
   btt_nao.grid(row=2, column= 3)
 
 def ajuda(): #Função de ajuda, que mostra como o jogo funciona
-  global a, b
-  pop_up = Tk()
+  global a, b, img
+  pop_up = Toplevel()
+  img = PhotoImage(file = "Icon.png") #Coloca a imagem como o icone da pagina
+  pop_up.iconphoto(False, img)
   pop_up.title("Ajuda")
   pop_up.geometry('%dx%d+%d+%d' % (310, 175, a+70, b+100)) #Aloca a nova tela
   pop_up.geometry("550x280")
