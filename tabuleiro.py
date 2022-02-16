@@ -9,8 +9,7 @@ class Tabuleiro: #Classe do tabuleiro
     f.close()
     self.total = tuple(palavras) #transforma a lista em tupla
     i = random.randint(0, len(palavras)) #escolha uma palavra aleatoria
-    self.atual = str(palavras[i])
-    print(self.atual)
+    self.atual = self.total[i]
   
   def verifica(self, palavra): #função para verificar se o usuario acertou ou não a palavra
     if palavra == self.atual: #Verifica primeiro se a palavra é a que devia ser descoberta
