@@ -21,7 +21,7 @@ class Tabuleiro: #Classe do tabuleiro
       acertos = [0, 0, 0, 0, 0] #Os acertos começam com 0, ou seja, nenhum
       i = 0
       while i < len(palavra): #While que percorre uma letra por vez da palavra
-        if palavra[i] == self.atual[i]: #Caso a posição seja correta o valor do acerto é 3
+        if palavra[i] == self.atual[i] and aux[i] != False: #Caso a posição seja correta o valor do acerto é 3
           acertos[i] = 3
           aux[i] = False
         else:
